@@ -1,0 +1,180 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+
+
+
+/* Sección de intro con logo centrado */
+.intro-logo {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.logo-hero {
+  animation: fadeInUp 2s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+.logo-hero .logo {
+  width: 250px;
+  max-width: 90vw;
+  height: auto;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1.5s forwards ease-out;
+}
+
+/* Animación */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero {
+  background-image: url('https://via.placeholder.com/1200x600.png?text=Fondo+Criadero');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ff9900;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e68a00;
+}
+
+.benefits, .ebook-promo, .testimonials, .form-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.benefits h2, .ebook-promo h2, .testimonials h2, .form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.benefits ul {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.benefits li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.ebook-promo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.ebook-image, .ebook-details {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+.ebook-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.ebook-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.ebook-details li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.testimonials .testimonial {
+  max-width: 600px;
+  margin: 20px auto;
+  font-style: italic;
+}
+
+.testimonials .testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.form-section form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-section input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-section button {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 5
+::contentReference[oaicite:0]{index=0}
+ 

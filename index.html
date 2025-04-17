@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CriarPollos.lat – Curso de Cría de Pollos</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<!-- Logo centrado al inicio -->
+<section class="intro-logo">
+  <div class="logo-hero">
+    <img src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/criarpollos.png" alt="Logo CriarPollos.lat" class="logo" />
+  </div>
+</section>
+
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Aprende a Criar Pollos de Forma Rentable</h1>
+      <p>Descubre el método probado para iniciar tu propio criadero desde casa.</p>
+      <a href="#formulario" class="cta-button">Descargar eBook por $1.99 USD</a>
+    </div>
+  </header>
+
+  <section class="benefits">
+    <h2>¿Qué aprenderás?</h2>
+    <ul>
+      <li>✅ Cómo montar tu criadero paso a paso</li>
+      <li>✅ Alimentación y cuidados esenciales</li>
+      <li>✅ Estrategias para maximizar tus ganancias</li>
+      <li>✅ Evitar errores comunes de principiantes</li>
+    </ul>
+  </section>
+
+  <section class="ebook-promo">
+    <div class="ebook-image">
+      <img src="https://cdn.glitch.global/c536c49d-7661-4fd9-81b8-918d12539028/ebook.png" alt="Portada del eBook" />
+    </div>
+    <div class="ebook-details">
+      <h2>Incluye:</h2>
+      <ul>
+        <li>📘 Guía paso a paso en PDF</li>
+        <li>🎥 Acceso a video tutoriales</li>
+        <li>📞 Soporte por WhatsApp</li>
+      </ul>
+      <a href="#formulario" class="cta-button">Obtener mi copia</a>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Testimonios</h2>
+    <div class="testimonial">
+      <p>"Gracias a CriarPollos.lat, ahora tengo mi propio negocio desde casa."</p>
+      <span>– María, Manizales</span>
+    </div>
+    <div class="testimonial">
+      <p>"El curso es claro y fácil de seguir. ¡Muy recomendado!"</p>
+      <span>– Juan, Bogotá</span>
+    </div>
+  </section>
+
+  <section class="form-section" id="formulario">
+    <h2>Descarga el eBook ahora</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo electrónico" required />
+      <button type="submit">Descargar por $1.99 USD</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CriarPollos.lat – Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Logo animado
+    gsap.to(".logo", {
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      ease: "power2.out"
+    });
+
+    // Desvanecer logo y mostrar hero al hacer scroll
+    gsap.to(".logo-hero", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top center",
+        scrub: true
+      },
+      opacity: 0,
+      y: -100,
+      duration: 1
+    });
+
+    // Mostrar contenido del hero
+    gsap.to(".hero-content", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top center",
+        toggleActions: "play none none none"
+      },
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: "power2.out"
+    });
+
+    // Parallax en secciones
+    gsap.utils.toArray("section").forEach(section => {
+      gsap.from(section, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%",
+          toggleActions: "play none none none"
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: "power2.out"
+      });
+    });
+  </script>
+  
+  
+  <script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".intro-logo", {
+    scrollTrigger: {
+      trigger: ".intro-logo",
+      start: "top top",
+      end: "bottom top",
+      scrub: true
+    },
+    opacity: 0,
+    y: -100
+  });
+</script>
+
+  
+</body>
+</html>
