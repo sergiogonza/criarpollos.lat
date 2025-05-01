@@ -40,6 +40,18 @@ body {
   z-index: 0;
 }
 
+
+.global-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+
 .logo-hero {
   position: relative;
   z-index: 2;
@@ -117,10 +129,17 @@ a {
   background-color: #e68a00;
 }
 
+
+
 .benefits, .ebook-promo, .testimonials, .form-section {
-  padding: 60px 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente oscuro */
+  color: #fff;
+    padding: 60px 20px;
   text-align: center;
 }
+
+
+
 
 .benefits h2, .ebook-promo h2, .testimonials h2, .form-section h2 {
   font-size: 2rem;
