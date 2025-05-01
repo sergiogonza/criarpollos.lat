@@ -132,8 +132,6 @@ a {
 
 
 .benefits, .ebook-promo, .testimonials, .form-section {
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente oscuro */
-  color: #fff;
     padding: 60px 20px;
   text-align: center;
 }
