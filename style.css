@@ -17,14 +17,14 @@ body {
 
 /* Sección de intro con logo centrado */
 .intro-logo {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent; /* Quitar fondo blanco */
   position: relative;
-  z-index: 1;
+  height: 100vh;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  z-index: 1;
 }
 
 .background-video {
@@ -39,11 +39,11 @@ body {
 
 .logo-hero {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  animation: fadeInUp 2s ease-out forwards;
 }
 
-
-.logo-hero .logo {
+.logo {
   width: 250px;
   max-width: 90vw;
   height: auto;
@@ -52,8 +52,19 @@ body {
   animation: slideUp 1.5s forwards ease-out;
 }
 
-/* Animación */
+/* Animaciones */
 @keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
